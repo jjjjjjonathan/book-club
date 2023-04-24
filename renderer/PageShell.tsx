@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import { PageContextProvider } from './usePageContext';
 import type { PageContext } from './types';
-import './PageShell.css';
+import './index.css'
 import { Link } from './Link';
 
 export { PageShell };
@@ -36,13 +36,7 @@ function PageShell({
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      style={{
-        display: 'flex',
-        maxWidth: 900,
-        margin: 'auto',
-      }}
-    >
+    <div className='flex m-auto max-w-4xl'>
       {children}
     </div>
   );
@@ -50,16 +44,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 
 function Sidebar({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      style={{
-        padding: 20,
-        flexShrink: 0,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        lineHeight: '1.8em',
-      }}
-    >
+    <div className='p-5 flex flex-col items-center'>
       {children}
     </div>
   );
@@ -67,14 +52,7 @@ function Sidebar({ children }: { children: React.ReactNode }) {
 
 function Content({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      style={{
-        padding: 20,
-        paddingBottom: 50,
-        borderLeft: '2px solid #eee',
-        minHeight: '100vh',
-      }}
-    >
+    <div className='min-h-screen p-5 pb-12'>
       {children}
     </div>
   );
@@ -82,12 +60,7 @@ function Content({ children }: { children: React.ReactNode }) {
 
 function Logo() {
   return (
-    <div
-      style={{
-        marginTop: 20,
-        marginBottom: 10,
-      }}
-    >
+    <div className='mt-5 mb-3'>
       <a href='/'>
         <img src={logo} height={64} width={64} alt='logo' />
       </a>

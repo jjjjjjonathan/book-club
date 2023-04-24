@@ -14,7 +14,7 @@ function Page() {
           Interactive. <Counter />
         </li>
       </ul>
-      <p className='text-5xl bg-blue-400'>HELLO WORLD</p>
+      <p className='text-5xl bg-emerald-400'>HELLO WORLD</p>
     </>
   );
 }
