@@ -5,15 +5,13 @@ import type { PageContext } from './types';
 import './index.css';
 import { Link } from './Link';
 
-export { PageShell };
-
-function PageShell({
+export const PageShell = ({
   children,
   pageContext,
 }: {
   children: React.ReactNode;
   pageContext: PageContext;
-}) {
+}) => {
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
@@ -32,7 +30,7 @@ function PageShell({
       </PageContextProvider>
     </React.StrictMode>
   );
-}
+};
 
 function Layout({ children }: { children: React.ReactNode }) {
   return <div className='m-auto flex max-w-4xl'>{children}</div>;
