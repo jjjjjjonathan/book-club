@@ -8,7 +8,7 @@ import type { PageContextServer } from './types';
 // See https://vite-plugin-ssr.com/data-fetching
 export const passToClient = ['pageProps', 'urlPathname'];
 
-export const render = async (pageContext: PageContextServer) => {
+export const render = (pageContext: PageContextServer) => {
   const { Page, pageProps } = pageContext;
   // This render() hook only supports SSR, see https://vite-plugin-ssr.com/render-modes for how to modify render() to support SPA
   if (!Page)

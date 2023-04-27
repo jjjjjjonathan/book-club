@@ -7,6 +7,7 @@ import type { PageContext } from './types';
 export { PageContextProvider };
 export { usePageContext };
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 const Context = React.createContext<PageContext>(undefined as any);
 
 function PageContextProvider({

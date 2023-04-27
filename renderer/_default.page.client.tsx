@@ -4,7 +4,7 @@ import { PageShell } from './PageShell';
 import type { PageContextClient } from './types';
 
 // This render() hook only supports SSR, see https://vite-plugin-ssr.com/render-modes for how to modify render() to support SPA
-export const render = async (pageContext: PageContextClient) => {
+export const render = (pageContext: PageContextClient) => {
   const { Page, pageProps } = pageContext;
   if (!Page)
     throw new Error(
